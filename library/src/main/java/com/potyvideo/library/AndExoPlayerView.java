@@ -18,10 +18,6 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.widget.AppCompatImageButton;
-
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.ExoPlayerFactory;
 import com.google.android.exoplayer2.PlaybackParameters;
@@ -54,6 +50,10 @@ import com.potyvideo.library.utils.PublicValues;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageButton;
 
 public class AndExoPlayerView extends LinearLayout implements View.OnClickListener {
 
@@ -340,7 +340,7 @@ public class AndExoPlayerView extends LinearLayout implements View.OnClickListen
         }
     }
 
-    private void releasePlayer() {
+    public void releasePlayer() {
         if (simpleExoPlayer != null) {
             playbackPosition = simpleExoPlayer.getCurrentPosition();
             currentWindow = simpleExoPlayer.getCurrentWindowIndex();
