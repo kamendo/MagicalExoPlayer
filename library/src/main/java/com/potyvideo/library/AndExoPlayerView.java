@@ -240,8 +240,7 @@ public class AndExoPlayerView extends LinearLayout implements View.OnClickListen
         return simpleExoPlayer;
     }
     
-    private void initializePlayer() {
-
+    protected void initializePlayer() {
         if (simpleExoPlayer == null) {
 
             bandwidthMeter = new DefaultBandwidthMeter();
